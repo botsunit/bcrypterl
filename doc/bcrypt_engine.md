@@ -11,8 +11,8 @@
 
 
 <table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#autodetect_cost-1">autodetect_cost/1</a></td><td>
-Returns the cost factor which will result in computation times less than +upper_time_limit_in_ms+.</td></tr><tr><td valign="top"><a href="#calibrate-1">calibrate/1</a></td><td>
-Autodetects the cost from the salt string.</td></tr><tr><td valign="top"><a href="#generate_salt-0">generate_salt/0</a></td><td>Equivalent to <a href="#generate_salt-1"><tt>generate_salt(DEFAULT_COST)</tt></a>.</td></tr><tr><td valign="top"><a href="#generate_salt-1">generate_salt/1</a></td><td>
+Autodetects the cost from the salt string.</td></tr><tr><td valign="top"><a href="#calibrate-1">calibrate/1</a></td><td>
+Returns the cost factor which will result in computation times less than <tt>Limit</tt> ms.</td></tr><tr><td valign="top"><a href="#generate_salt-0">generate_salt/0</a></td><td>Equivalent to <a href="#generate_salt-1"><tt>generate_salt(DEFAULT_COST)</tt></a>.</td></tr><tr><td valign="top"><a href="#generate_salt-1">generate_salt/1</a></td><td>
 Generates a random salt with a given computational cost.</td></tr><tr><td valign="top"><a href="#hash_secret-2">hash_secret/2</a></td><td>
 Given a secret and a valid salt (see bcrypt_engine:generate_salt/1) calculates
 a bcrypt() password hash.</td></tr><tr><td valign="top"><a href="#valid_salt-1">valid_salt/1</a></td><td>
@@ -34,7 +34,7 @@ autodetect_cost(Salt::string()) -&gt; integer() | {error, invalid_salt}
 <br />
 
 
-Returns the cost factor which will result in computation times less than +upper_time_limit_in_ms+.
+Autodetects the cost from the salt string.
 <a name="calibrate-1"></a>
 
 ### calibrate/1 ###
@@ -46,7 +46,7 @@ calibrate(Limit::integer()) -&gt; integer()
 <br />
 
 
-Autodetects the cost from the salt string.
+Returns the cost factor which will result in computation times less than `Limit` ms.
 <a name="generate_salt-0"></a>
 
 ### generate_salt/0 ###
