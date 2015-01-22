@@ -1,0 +1,13 @@
+{application, bcrypterl,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {modules, [bcrypterl_nif, bcrypt_engine]},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  crypto
+                 ]},
+  {env, []}
+ ]}.

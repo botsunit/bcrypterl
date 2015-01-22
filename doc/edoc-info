@@ -1,0 +1,4 @@
+%% encoding: UTF-8
+{application,erlzip}.
+{packages,[]}.
+{modules,[bcrypt_engine,bcrypt_password]}.
