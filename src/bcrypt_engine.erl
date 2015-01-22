@@ -47,7 +47,7 @@ valid_salt(Salt) ->
   end.
 
 % @doc
-% Returns the cost factor which will result in computation times less than +upper_time_limit_in_ms+.
+% Autodetects the cost from the salt string.
 % @end
 -spec autodetect_cost(string()) -> integer() | {error, invalid_salt}.
 autodetect_cost(Salt) ->
@@ -57,7 +57,7 @@ autodetect_cost(Salt) ->
   end.
 
 % @doc
-% Autodetects the cost from the salt string.
+% Returns the cost factor which will result in computation times less than <tt>Limit</tt> ms.
 % @end
 -spec calibrate(integer()) -> integer().
 calibrate(Limit) ->
